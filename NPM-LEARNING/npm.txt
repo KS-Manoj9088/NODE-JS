@@ -1,0 +1,138 @@
+What is NPM?
+NPM (Node Package Manager) is a package manager for JavaScript that
+effectively manages the packages (modules) of your Node.js projects. With the
+use of NPM, developers install, update, and manage dependencies and can
+share and publish their own packages.
+Features of NPM
+There are various features of NPM, such as:
+• Workspaces: NPM helps to work on multiple projects in a single
+workspace.
+• Private Packages: With NPM, users can package privately and share
+publicly to a private NPM registry.
+• Version Ranges: Specify version ranges for your dependencies so you can
+avoid undesirable updates.
+• NPM Scripts Lifecycle: NPM defines scripts that are run automatically at
+specific life cycles of a package, such as preinstall/postinstall/prepublish.
+Along with these, you can get numerous other NPM commands to fully control
+your JavaScript project and leverage the full power of packages available in the
+ecosystem.
+What are NPM commands?
+NPM commands are instructions executed through command lines that help in
+the management of packages or modules in JavaScript applications. By default,
+NPM acts as the package manager for Node.js, making it relatively easy to
+install and share libraries as well as tools for application in one’s projects.
+Most Commonly Used NPM Commands
+Given below is a comprehensive list of the most commonly used NPM
+commands along with their descriptions.
+
+
+1. npm init
+This command initializes a new Node.js project by generating a package.json
+file containing metadata about the project and its dependencies.
+Command: npm init
+
+You can also run it in “default mode” by skipping the setup steps:
+Command: npm init –y
+
+2. npm install (or npm i)
+This command installs all the dependencies listed in your package.json file. It
+also allows you to install specific packages globally or locally within a project.
+Install dependencies:
+Command: npm install
+Install a specific package locally:
+Command: npm install &lt;package-name&gt;
+Install a specific package globally:
+Command: npm install -g &lt;package-name&gt;
+Installation Global vs. Local Installations
+npm install -g installs a package globally, permitting its usage through your
+application by all projects. The best practice, however, is to install a package in
+a project to avoid unwanted conflict and to be in control of the same
+dependency.
+
+
+3. npm install for specific package
+With this command, developers can install a specific package and add it to the
+dependencies section of your package.json file.
+Command: npm install &lt;package-name&gt; --save
+
+
+4. npm install specific packages for development
+The given below command is useful in installing a specific package and adding
+it to the dependencies section of your package.json. This command is useful
+for packages required during development but not in production (for example,
+testing frameworks).
+Command: npm install &lt;package-name&gt; --save-dev
+
+5. npm uninstall (or npm rm)
+This command removes a package from your project. It also removes the
+dependency from the package.json file.
+Command: npm uninstall &lt;package-name&gt;
+
+
+6. npm update
+As the name suggests, it can update all installed packages to their latest
+versions according to the version range specified in the package.json.
+Command: npm update
+
+
+7. npm outdated
+This command returns information about the current version, the wanted
+version, and the latest version. Therefore, using this command, developers can
+get a list of packages that have newer versions available but are not installed
+yet in the package.json.
+Command: npm outdated
+
+
+8. npm run
+With the run command, you can run a custom script specified in the scripts
+section of your package.json. You might use it to test, start servers, or bundle
+your files.
+Command: npm run &lt;script-name&gt;
+Example from package.json
+json
+{
+&quot;scripts&quot;: {
+&quot;start&quot;: &quot;node index.js&quot;,
+&quot;test&quot;: &quot;jest&quot;
+}
+}
+To run the script: npm run start
+
+• NPM Scripts: NPM scripts are an effortless way of automating the most
+common tasks within your project. You might easily define scripts in the scripts
+section of your package.json and run them with npm run. For example, you
+may have a script that boots up your development server, runs tests, or builds
+your project, to mention but a few.
+
+
+9. npm audit
+It scans your project for any vulnerabilities in the libraries it uses and lets you
+know about them.
+Command: npm audit
+There’s another command to fix the vulnerabilities of the libraries.
+Command: npm audit fix
+
+
+10. npm list
+For beginners, the swallowing command is very useful. It displays the tree (a
+comprehensive list) of installed packages, listing all of your project’s
+dependencies in one place.
+Command: npm list
+
+
+11. npm cache clean
+The NPM cache is where downloaded packages are stored. Sometimes,
+cleaning the cache solves issues with package installation.
+Command: npm cache clean --force
+
+
+12. npm publish
+You can publish packages available for others to install. The publishing takes
+place on the NPM registry.
+Command: npm publish
+
+
+13. npm version
+Get the most used command to increment the version number of your project
+according to semantic versioning. It modifies the version field in package.json.
+Command: npm version &lt;update_type&gt;

@@ -1,0 +1,1 @@
+I am writing this statement into a File - 'input.txt' 
