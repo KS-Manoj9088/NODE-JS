@@ -1,0 +1,59 @@
+[
+    {
+        "id": 0,
+        "name": "APPLE IPHONE 15 Pro MAX",
+        "price": 999.99,
+        "brand": "APPLE",
+        "category": "PHONE",
+        "description": "BEST SELLING PHONE"
+    },
+    {
+        "id": 1,
+        "name": "SAMSUNG GALAXY S23 Ultra",
+        "price": 1199.99,
+        "brand": "SAMSUNG",
+        "category": "PHONE",
+        "description": "FLAGSHIP SAMSUNG PHONE"
+    },
+    {
+        "id": 2,
+        "name": "ONEPLUS 11 Pro",
+        "price": 799.99,
+        "brand": "ONEPLUS",
+        "category": "PHONE",
+        "description": "FASTEST CHARGING PHONE"
+    },
+    {
+        "id": 3,
+        "name": "GOOGLE PIXEL 7 Pro",
+        "price": 899.99,
+        "brand": "GOOGLE",
+        "category": "PHONE",
+        "description": "BEST CAMERA PHONE"
+    },
+    {
+        "id": 4,
+        "name": "XIAOMI 13 Pro",
+        "price": 749.99,
+        "brand": "XIAOMI",
+        "category": "PHONE",
+        "description": "BEST VALUE FOR MONEY"
+    },
+    {
+        "id": 5,
+        "name": "ASUS ROG Phone 7",
+        "price": 999.99,
+        "brand": "ASUS",
+        "category": "PHONE",
+        "description": "BEST GAMING PHONE"
+    },
+    {
+        "id": 6,
+        "name": "SONY Xperia 1 V",
+        "price": 1099.99,
+        "brand": "SONY",
+        "category": "PHONE",
+        "description": "BEST MULTIMEDIA PHONE"
+    }
+]
+
