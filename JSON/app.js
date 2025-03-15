@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require("fs");
+const url = require("url");
 
 let html = fs.readFileSync("index.html","utf-8", (err)=>{
     if(err) {
@@ -12,7 +13,14 @@ let products = JSON.parse(fs.readFileSync("products.json","utf-8")); //Convert J
 let productListHtMl = fs.readFileSync("product-list.html","utf-8");
 
 const server = http.createServer( (request, response) => {
-    let path = request.url;
+
+    //let parsedUrl = url.parse(request.url, true);  //Here boolean is used to parse the query String.
+    //console.log(parsedUrl);
+
+    let {query, pathname:path} = url.parse(request.url, true);
+
+    //let path = request.url;
+    
     if(path === '/' || path.toLocaleLowerCase() === '/home'){
         response.writeHead(200,{
             'Content-Type': 'text/html',
