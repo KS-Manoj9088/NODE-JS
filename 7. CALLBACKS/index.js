@@ -10,4 +10,8 @@ fs.readFile("input.txt", "utf-8", (err,data) => {
         if (err) throw err;
         console.log("File written Succesfulll");
     });
-})
+});
+
+
+// callbacks functions are the one which are passed as aparamter to another function.
+
