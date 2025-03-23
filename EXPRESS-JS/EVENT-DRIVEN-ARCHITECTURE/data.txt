@@ -1,0 +1,7 @@
+// we have three main here
+1. Event emitter
+2. Event listener
+3. Event handler
+
+EventEmitter---> EventListener--->EventHandler
+
