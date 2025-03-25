@@ -5,17 +5,13 @@ const app = express();
 // Middleware
 let customMiddleware = (req, res, next) => {
     console.log('Custom Middleware');
-    res.sendFile(path.join(__dirname, 'public', 'index.html')); // Serve the HTML file
     next();
 };
-
-// "HTML" files render cheyyali antae "res.sendFile" method use cheyyali. 
-// Render cheddham anukunna HTML public folder lo undaali.
 
 app.use(customMiddleware);
 
 // Serve static files from the 'public' folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'))); //to render css file or any other.
 
 const products = [
     { id: 1, name: "MacBookAir1", price: "$1000" },
@@ -24,6 +20,13 @@ const products = [
 ];
 
 // Routes
+
+app.get("/", (req, res)=>{
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+// "HTML" files render cheyyali antae "res.sendFile" method use cheyyali. 
+// Render cheddham anukunna HTML public folder lo undaali.
+
 app.get("/products", (req, res) => {
     res.json(products);
 });
