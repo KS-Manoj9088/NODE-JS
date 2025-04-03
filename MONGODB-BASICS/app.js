@@ -2,6 +2,7 @@ const mongoose = require("mongoose")
 
 mongoose.connect(
     "mongodb+srv://KolluruSriManojKumar:ManojKumar2@cluster1.0apkyck.mongodb.net/thunder",
+    //mongodb+srv://KolluruSriManojKumar:<db_password>@cluster1.0apkyck.mongodb.net/thunder
     // Connection String antha raasi lastlo "/database name" isthae respective database create avuthaadhi
 ).then( ()=>{
     console.log("Connected to MongoDB Succesfully")
@@ -69,7 +70,7 @@ async function runQueryExamples(){
         const getAllUsers = await User.find().sort({"name":-1}).limit(2).skip(1);
         //console.log(getAllUsers);
 
-        //console.log(`Created New User : ${newUser1}`);
+        console.log(`Created New User : ${newUser1}`);
     }
     catch(e){
         console.log("Error while running query examples", e)
