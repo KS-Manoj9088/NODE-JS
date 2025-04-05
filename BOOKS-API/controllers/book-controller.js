@@ -76,11 +76,53 @@ const addNewBook = async (req,res)=>{
 }
 
 const updateBook = async (req,res)=>{
-    
+    try{
+        const updatedBookData = req.body;
+        const getBookId = req.params.id;
+        const updatedBook = await Book.findByIdAndUpdate(
+            getBookId,
+            updatedBookData,
+            {
+                new : true
+            }
+        );
+
+        if(!updatedBook){
+            res.status(404).json({
+                success : false,
+                description : "No Books found in Collection"
+            });
+        }
+        else{
+            res.status(200).json({
+                success : true,
+                message : "Book Updated Succesfully",
+                data : updatedBook
+            });
+        }
+    }
+    catch(error){
+        console.log(error);
+    }
 }
 
 const deleteBook = async(req,res)=>{
+    const currentBookId = req.params.id;
+    const deletedBook = await Book.findByIdAndDelete(currentBookId);
 
+    if(!deletedBook){
+        res.status(404).json({
+            success : false,
+            description : "No Books found in Collection"
+        });
+    }
+    else{
+        res.status(200).json({
+            success : true,
+            deletedBook : deletedBook,
+            message : "Book deleted Succesfully",
+        });
+    }
 }
 
 module.exports = {

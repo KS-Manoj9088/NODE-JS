@@ -13,7 +13,7 @@ router.post("/add",addNewBook);
 
 router.put("/update/:id",updateBook);
 
-router.delete("/delete", deleteBook);
+router.delete("/delete/:id", deleteBook);
 
 
 
