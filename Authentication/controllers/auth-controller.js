@@ -1,11 +1,10 @@
 
-const {User} = require("../models/User"); 
+const User = require("../models/User"); 
 
 // Use bcrypt module for hashing of password
 const bcrypt = require("bcryptjs");
 
 // Register/ Signup controller
-
 const registerUser = async (req,res) => {
     try {
         const {username, email, password, role} = req.body;
@@ -57,7 +56,6 @@ const registerUser = async (req,res) => {
 }
 
 // Login Controller
-
 const loginUser = async (req,res) => {
     try {
 
