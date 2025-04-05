@@ -7,7 +7,7 @@ const bcrypt = require("bcryptjs");
 // Register/ Signup controller
 const registerUser = async (req,res) => {
     try {
-        //const {name , email, password, role} = req.body;
+        const {name , email, password, role} = req.body;
         
         console.log(req.body);
         
