@@ -7,10 +7,12 @@ const bcrypt = require("bcryptjs");
 // Register/ Signup controller
 const registerUser = async (req,res) => {
     try {
-        const {username, email, password, role} = req.body;
+        //const {name , email, password, role} = req.body;
+        
+        console.log(req.body);
         
         // Check if user already exists in database.
-        const existingUser = await User.findOne({ $or : [{email}, {username} ] });
+        const existingUser = await User.findOne({ $or : [{email}, {name} ] });
         if(existingUser) {
             return res.status(400).json({
                 success : false,
@@ -26,7 +28,7 @@ const registerUser = async (req,res) => {
         // Create a new  User and save in database
 
         const newUser = new User({
-            username,
+            username : name,
             email,
             password : hashedPassword,
             role : role || "user"
