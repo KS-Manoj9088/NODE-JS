@@ -2,6 +2,8 @@ require("dotenv").config()
 const express = require("express");
 const {dbConnection} = require("./database/db");
 const authRoutes = require("./routes/auth-routes")
+const homeRoutes = require("./routes/home-routes");
+const adminRoutes = require("./routes/admin-routes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -15,6 +17,8 @@ app.use(express.json());
 
 // Middleware to for register and signup 
 app.use("/api/auth", authRoutes);
+app.use("/api/home", homeRoutes);
+app.use("/api/admin", adminRoutes);
 
 // To render index.html
 app.get("/",(req,res)=>{
