@@ -11,7 +11,7 @@ dbConnection();
 //Middlewares
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use(express.static(path.join(__dirname, "style.css")));
+app.use(express.static(__dirname));
 
 //Routes
 app.use("/fest/home",allRoutes);
